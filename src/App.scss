@@ -1,8 +1,39 @@
+// Bootstrap theme customization - override default Bootstrap colors
+$primary: #df682e; // dark-background
+$secondary: #76300e; // brown
+$danger: #a00318; // accent
+$light: #fbc585; // background
+$body-bg: #fbc585;
+$body-color: #212529;
+$font-family-base: "Lora", serif;
+
+// Custom theme colors
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "danger": $danger,
+  "light": $light,
+  "accent": #a00318,
+  "brown": #76300e,
+  "pink": #cd2c58,
+);
+
+// Navbar theming
+$navbar-dark-color: rgba(255, 255, 255, 0.9);
+$navbar-dark-hover-color: rgba(255, 255, 255, 1);
+$navbar-dark-active-color: rgba(255, 255, 255, 1);
+$navbar-dark-brand-color: rgba(255, 255, 255, 0.9);
+$navbar-dark-brand-hover-color: rgba(255, 255, 255, 1);
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Custom CSS variables for additional theming
 :root {
-  --accent: #a00318;
-  --dark-background: #df682e;
-  --background: #fbc585;
-  --brown: #76300e;
+  --accent: #{$danger};
+  --dark-background: #{$primary};
+  --background: #{$light};
+  --brown: #{$secondary};
   font-size: 16px;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -10,17 +41,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* TODO: make css more responsive to screen size */
-
 body {
-  font-family: "Lora";
-  background-color: var(--background);
+  font-family: $font-family-base;
+  background-color: $body-bg;
 }
 
-.navbar {
-  background: var(--dark-background);
-}
-
+// Navbar styles
 .navbar-brand {
   display: flex;
   justify-content: center;
@@ -33,16 +59,19 @@ body {
   width: 40px;
   height: 40px;
   transition: transform 0.7s ease-in-out;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
 }
 
-.nav-link.active {
-  font-weight: 600;
+.nav-link {
+  &.active {
+    font-weight: 600;
+  }
 }
 
-.navbar-logo:hover {
-  transform: rotate(360deg);
-}
-
+// Home content styles
 .text-content {
   flex: 1;
   min-width: 0;
@@ -50,59 +79,98 @@ body {
   margin-top: clamp(1rem, 10vh, 10%);
   margin-left: clamp(1rem, 10vw, 10%);
   margin-right: 5vw;
-}
 
-.text-content p {
-  margin-top: 0.2rem;
+  p {
+    margin-top: 0.2rem;
+  }
+
+  @media (max-width: 900px) {
+    margin-right: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
 }
 
 .club-title {
   font-size: 1.4rem;
+
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+  }
 }
 
 .description {
   padding-top: 1.5rem;
   font-size: 1.1rem;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+}
+
+.accordion {
+  margin-top: 2rem;
+  max-width: 73vw;
+  margin: 0 auto;
+}
+
+.footer {
+  margin-top: 2rem;
 }
 
 .date {
   transform: rotate(-7deg);
   display: inline-block;
   margin-bottom: 20px;
-  background-color: var(--dark-background);
   border-radius: 9999px;
   padding: 8px 16px;
   font-size: 1.2rem;
   transition: transform 0.2s ease-in-out;
-}
 
-.date:hover {
-  transform: rotate(0deg);
-}
+  &:hover {
+    transform: rotate(0deg);
+  }
 
-.word1 {
-  color: var(--accent);
-}
-
-.word2 {
-  color: var(--brown);
-}
-
-.word3 {
-  color: #cd2c58;
-}
-
-.word4 {
-  color: var(--brown);
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
 }
 
 .horizontal-container {
   display: flex;
-  max-width: 70vw;
+  max-width: 95vw;
   margin: 0 auto;
   align-items: center;
   gap: 1.2rem;
   padding: 16px;
+
+  @media (max-width: 900px) {
+    max-width: 90vw;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 95vw;
+  }
+
+  @media (max-width: 480px) {
+    padding: 8px;
+  }
 }
 
 .home-image {
@@ -112,73 +180,20 @@ body {
   margin-top: clamp(1rem, 10vh, 5%);
   object-fit: cover;
   max-width: min(600px, 35vw);
-  border: 3px dashed var(--dark-background);
+  border: 3px dashed;
   border-radius: 15px;
   transform: rotate(2deg);
   transition: transform 0.2s ease-in-out;
-}
 
-.home-image:hover {
-  transform: rotate(0deg);
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 900px) {
-  .horizontal-container {
-    max-width: 90vw;
+  &:hover {
+    transform: rotate(0deg);
   }
 
-  .text-content {
-    margin-right: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .horizontal-container {
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 95vw;
-  }
-
-  .text-content {
-    max-width: 100%;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  .home-image {
+  @media (max-width: 768px) {
     max-width: 100%;
     width: 100%;
     margin-left: 0;
     margin-right: 0;
     margin-top: 2rem;
-  }
-
-  .description {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .horizontal-container {
-    padding: 8px;
-  }
-
-  .text-content {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-
-  .club-title {
-    font-size: 1.2rem;
-  }
-
-  .date {
-    font-size: 1rem;
-    padding: 6px 12px;
-  }
-
-  .description {
-    font-size: 1rem;
   }
 }

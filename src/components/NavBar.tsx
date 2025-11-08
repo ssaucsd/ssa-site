@@ -29,7 +29,7 @@ const NavBarComponent = () => {
   const [selected, setSelected] = useState("Home");
 
   return (
-    <Navbar expand="lg" className="navbar">
+    <Navbar expand="lg" className="navbar bg-primary">
       <Container fluid>
         <Navbar.Brand href="/">
           <img
