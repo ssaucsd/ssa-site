@@ -3,7 +3,7 @@ const Home = () => {
     <>
       <span className="horizontal-container">
         <div className="ssa-ucsd">
-          <span className="date">est. 2021</span>
+          <span className="date">est. 2018</span>
           <div className="club-title">
             <span className="word1">Symphonic</span> <br />
             <span className="word2">Student</span> <br />
