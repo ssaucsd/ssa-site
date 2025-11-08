@@ -1,4 +1,5 @@
 import { Container, Row, Col, Image, Badge } from "react-bootstrap";
+import { Calendar } from "lucide-react";
 
 const HomeContent = () => {
   return (
@@ -6,7 +7,7 @@ const HomeContent = () => {
       <Row className="align-items-center">
         <Col xs={12} md={6} className="text-content">
           <Badge bg="primary" className="date">
-            est. 2018
+            <Calendar size={18} /> est. 2018
           </Badge>
           <div className="club-title">
             <span className="text-danger">Symphonic</span> <br />

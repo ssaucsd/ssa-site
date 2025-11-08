@@ -191,28 +191,58 @@ body {
 .card-1 {
   transform: rotate(-2deg);
   transition: transform 0.2s ease-in-out;
+  border: 2px dashed;
 
   &:hover {
     transform: rotate(0deg);
   }
+}
+
+.music-icon {
+  margin-bottom: 0.4rem;
+  margin-left: 0.2rem;
+  transform: rotate(2deg);
+  background-color: $primary;
+  padding: 7px;
+  border-radius: 10px;
 }
 
 .card-2 {
   transform: rotate(2deg);
   transition: transform 0.2s ease-in-out;
+  border: 2px dashed;
 
   &:hover {
     transform: rotate(0deg);
   }
 }
 
+.calendar-icon {
+  margin-bottom: 0.4rem;
+  margin-left: 0.2rem;
+  transform: rotate(2deg);
+  background-color: $primary;
+  padding: 7px;
+  border-radius: 10px;
+}
+
 .card-3 {
   transform: rotate(-0.5deg);
   transition: transform 0.2s ease-in-out;
+  border: 2px dashed;
 
   &:hover {
     transform: rotate(0deg);
   }
+}
+
+.users-icon {
+  margin-bottom: 0.4rem;
+  margin-left: 0.2rem;
+  transform: rotate(2deg);
+  background-color: $primary;
+  padding: 7px;
+  border-radius: 10px;
 }
 
 .home-image {

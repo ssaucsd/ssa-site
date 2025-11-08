@@ -1,4 +1,5 @@
-import { Button, Card, Col, Row, Container } from "react-bootstrap";
+import { Card, Col, Row, Container } from "react-bootstrap";
+import { Music2, Calendar, Users } from "lucide-react";
 
 const Cards = () => {
   return (
@@ -6,11 +7,9 @@ const Cards = () => {
       <Container fluid>
         <Row className="cards-row1">
           <Col className="flex-column">
-            <Card
-              className="card-1"
-              style={{ width: "18rem", height: "10rem" }}
-            >
+            <Card className="card-1">
               <Card.Body>
+                <Music2 size={48} className="music-icon" />
                 <Card.Title>Weekly Rehearsals</Card.Title>
                 <Card.Text>
                   Join us every Wednesday evening for collaborative music-making
@@ -20,8 +19,9 @@ const Cards = () => {
             </Card>
           </Col>
           <Col>
-            <Card className="card-2" style={{ width: "18rem" }}>
+            <Card className="card-2">
               <Card.Body>
+                <Calendar size={48} className="calendar-icon" />
                 <Card.Title>Quarterly Concerts</Card.Title>
                 <Card.Text>
                   Perform in stunning venues across campus and share music with
@@ -32,8 +32,9 @@ const Cards = () => {
           </Col>
         </Row>
         <Row className="cards-row2">
-          <Card className="card-3" style={{ width: "47rem", height: "6rem" }}>
+          <Card className="card-3">
             <Card.Body>
+              <Users size={48} className="users-icon" />
               <Card.Title>Community Vibes</Card.Title>
               <Card.Text>
                 Connect with fellow music enthusiasts and build lifelong
