@@ -41,7 +41,7 @@ const NavBar = ({ selectedItem }: Props) => {
       <Container fluid>
         <Navbar.Brand href="/">
           <img
-            src="/assets/android-chrome-512x512.png"
+            src="/assets/favicon/android-chrome-512x512.png"
             alt="SSA Logo"
             className="d-inline-block align-text-top navbar-logo"
           />

@@ -24,6 +24,15 @@ const HomeAccordions = () => {
             concerts, masterclasses, and socials.
           </Accordion.Body>
         </Accordion.Item>
+        <Accordion.Item eventKey="2">
+          <Accordion.Header>
+            How do I contact a board member for more information?
+          </Accordion.Header>
+          <Accordion.Body>
+            You can reach out to us via email at symphoni@ucsd.edu or ping a
+            board member on the Discord.
+          </Accordion.Body>
+        </Accordion.Item>
       </Accordion>
     </>
   );

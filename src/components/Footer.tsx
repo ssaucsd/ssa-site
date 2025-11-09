@@ -22,10 +22,10 @@ const Footer = () => {
       <footer className="footer">
         <Container fluid>
           <Row className="bg-primary text-white p-4">
-            <Col mx-5>
+            <Col mx-5="true">
               <Stack>
                 <Image
-                  src="/assets/android-chrome-512x512.png"
+                  src="/assets/favicon/android-chrome-512x512.png"
                   alt="SSA Logo"
                   className="footer-logo mb-2"
                   width={128}
@@ -69,7 +69,7 @@ const Footer = () => {
               <Nav className="flex-column fs-8">
                 <h4>Contact Us!</h4>
                 <NavLink href="mailto:symphoni@ucsd.edu" className="text-white">
-                  <Mail size={18} /> symphoni@ucsd.edu
+                  <Mail size={18} /> Email
                 </NavLink>
               </Nav>
             </Col>
