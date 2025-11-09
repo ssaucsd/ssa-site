@@ -7,6 +7,7 @@ WIP, a landing page for the Symphonic Student Association at UCSD
 ### Installing
 
 - Install VSCode and the latest version of Node.js.
+- Install git and git-lfs.
 - Clone the repository to your own computer.
 - Run `npm install`
 
