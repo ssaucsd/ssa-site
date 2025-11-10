@@ -46,6 +46,13 @@ const DropdownItems: NavItem[] = [
 
 const NavBar = ({ selectedItem }: Props) => {
   const [selected, setSelected] = useState(selectedItem);
+  const [show, setShow] = useState(false);
+  const showDropdown = () => {
+    setShow(!show);
+  };
+  const hideDropdown = () => {
+    setShow(false);
+  };
 
   return (
     <Navbar expand="lg" className="navbar bg-primary">
@@ -71,7 +78,13 @@ const NavBar = ({ selectedItem }: Props) => {
                 {item.text}
               </Nav.Link>
             ))}
-            <NavDropdown title="About" id="basic-nav-dropdown">
+            <NavDropdown
+              title="About"
+              id="basic-nav-dropdown"
+              show={show}
+              onMouseEnter={showDropdown}
+              onMouseLeave={hideDropdown}
+            >
               {DropdownItems.map((item) => (
                 <NavDropdown.Item
                   href={item.link}

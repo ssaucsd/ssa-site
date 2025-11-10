@@ -1,5 +1,5 @@
 import { Card, Row, Col, Container } from "react-bootstrap";
-import { boardMembers } from "../data/boardMembers";
+import { boardMembers } from "../../data/boardMembers";
 
 const BoardCards = () => {
   return (

@@ -1,6 +1,6 @@
 import "./App.scss";
 import NavBar from "./components/NavBar";
-import Home from "./components/Home";
+import Home from "./components/home/Home";
 import Footer from "./components/Footer";
 
 function App() {

@@ -4,9 +4,9 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router";
 import App from "./App.tsx";
-import Board from "./components/Board.tsx";
+import Board from "./components/board/Board.tsx";
 import Mission from "./components/Mission.tsx";
-import Events from "./components/Events.tsx";
+import Events from "./components/events/Events.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

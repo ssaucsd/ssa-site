@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
-import NavBar from "./NavBar";
-import Footer from "./Footer";
+import NavBar from "../NavBar";
+import Footer from "../Footer";
 import BoardCards from "./BoardCards";
 import PastBoard from "./PastBoard";
 
