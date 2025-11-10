@@ -11,7 +11,7 @@ const Mission = () => {
           <Col xs={12} md={5} lg={4}>
             <img
               src="/assets/mission.jpg"
-              alt="A picture of SSA members at a beach social"
+              alt="A picture of SSA members at the beach"
             />
           </Col>
           <Col xs={12} md={7} lg={8}>
