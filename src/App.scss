@@ -53,11 +53,16 @@ $navbar-dark-brand-hover-color: rgba(255, 255, 255, 1);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
 }
 
 body {
   font-family: $font-family-base;
   background-color: $body-bg;
+  overflow-x: hidden;
 }
 
 // Navbar styles
@@ -66,6 +71,11 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: 600;
+  font-size: 1.25rem;
+
+  @media (max-width: 576px) {
+    font-size: 1rem;
+  }
 }
 
 .navbar-logo {
@@ -73,6 +83,12 @@ body {
   width: 40px;
   height: 40px;
   transition: transform 0.7s ease-in-out;
+
+  @media (max-width: 576px) {
+    width: 32px;
+    height: 32px;
+    margin-right: 6px;
+  }
 
   &:hover {
     transform: rotate(360deg);
@@ -83,6 +99,10 @@ body {
   &.active {
     font-weight: 600;
   }
+
+  @media (max-width: 991px) {
+    padding: 0.5rem 1rem;
+  }
 }
 
 .cards-row1 {
@@ -91,20 +111,21 @@ body {
   margin-bottom: 2.2rem;
   margin-top: 2rem;
 
-  .col {
-    margin-bottom: 1.5rem;
-
-    @media (min-width: 768px) {
-      margin-bottom: 0;
-    }
+  @media (max-width: 992px) {
+    max-width: 85vw;
   }
-}
 
-.cards-row2 {
-  max-width: 70vw;
-  margin: 0 auto;
-  margin-bottom: 2.2rem;
-  margin-top: 2rem;
+  @media (max-width: 768px) {
+    max-width: 90vw;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 576px) {
+    max-width: 95vw;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
 }
 
 // Home content styles
@@ -118,6 +139,8 @@ body {
 
   p {
     margin-top: 0.2rem;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   @media (max-width: 900px) {
@@ -128,19 +151,22 @@ body {
     max-width: 100%;
     margin-left: 1rem;
     margin-right: 1rem;
+    order: 2;
   }
 
-  @media (max-width: 480px) {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+  @media (max-width: 576px) {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    margin-top: 1rem;
   }
 }
 
 .club-title {
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 4vw, 1.4rem);
+  line-height: 1.3;
 
-  @media (max-width: 480px) {
-    font-size: 1.2rem;
+  @media (max-width: 576px) {
+    font-size: 1.1rem;
   }
 }
 
@@ -150,10 +176,65 @@ body {
     margin-bottom: 1rem;
     color: $danger;
     text-align: center;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    padding: 0 1rem;
+  }
+
+  .ensemble-row {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      padding: 0 0.75rem;
+    }
+
+    @media (max-width: 576px) {
+      padding: 0 0.5rem;
+    }
   }
 
   .ensemble-carousel {
-    margin-left: 2rem;
+    padding: 0 1rem;
+
+    @media (max-width: 768px) {
+      padding: 0 0.5rem;
+    }
+
+    @media (max-width: 576px) {
+      padding: 0;
+    }
+
+    .carousel {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+      img {
+        border-radius: 10px;
+      }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      @media (max-width: 576px) {
+        width: 8%;
+      }
+    }
+  }
+
+  .ensemble-description {
+    padding: 0 1rem;
+
+    @media (max-width: 768px) {
+      padding: 0 0.75rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 576px) {
+      padding: 0 0.5rem;
+    }
   }
 
   .video-embeds {
@@ -163,11 +244,23 @@ body {
     margin-right: auto;
     padding: 0 1rem;
 
+    @media (max-width: 576px) {
+      padding: 0 0.5rem;
+      margin-top: 1.5rem;
+    }
+
     .video-embed-col {
       margin-bottom: 1.5rem;
+      padding: 0 0.75rem;
 
       @media (min-width: 992px) {
         margin-bottom: 0;
+        padding: 0 1rem;
+      }
+
+      @media (max-width: 576px) {
+        margin-bottom: 1rem;
+        padding: 0 0.25rem;
       }
     }
 
@@ -176,6 +269,7 @@ body {
       height: auto;
       aspect-ratio: 16 / 9;
       border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
   }
 
@@ -185,11 +279,27 @@ body {
     line-height: 1.6;
 
     @media (min-width: 769px) {
-      margin-left: 2rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
 
     @media (max-width: 768px) {
+      margin: 0.75rem 0;
+    }
+
+    @media (max-width: 576px) {
       margin: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: $danger;
+      text-decoration: underline;
+      font-weight: 500;
+
+      &:hover {
+        color: darken($danger, 10%);
+      }
     }
   }
 }
@@ -200,6 +310,8 @@ body {
     margin-bottom: 1rem;
     color: $danger;
     text-align: center;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    padding: 0 1rem;
   }
 
   .row {
@@ -210,6 +322,10 @@ body {
 
     @media (max-width: 768px) {
       flex-direction: column;
+      padding: 0 0.75rem;
+    }
+
+    @media (max-width: 576px) {
       padding: 0 0.5rem;
     }
   }
@@ -231,7 +347,12 @@ body {
     }
 
     @media (max-width: 768px) {
-      margin: 0.5rem 0;
+      margin: 0.75rem;
+    }
+
+    @media (max-width: 576px) {
+      margin: 0.5rem;
+      font-size: 0.95rem;
     }
   }
 
@@ -253,7 +374,13 @@ body {
 
     @media (max-width: 768px) {
       max-width: 100%;
-      margin: 1rem 0;
+      margin: 1rem auto;
+      display: block;
+    }
+
+    @media (max-width: 576px) {
+      margin: 0.5rem auto;
+      border-width: 2px;
     }
   }
 }
@@ -264,6 +391,8 @@ body {
     margin-bottom: 1rem;
     color: $danger;
     text-align: center;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    padding: 0 1rem;
   }
 
   h2 {
@@ -271,11 +400,26 @@ body {
     margin-bottom: 1rem;
     color: $secondary;
     text-align: center;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    padding: 0 1rem;
+  }
+
+  .row {
+    padding: 0 1rem;
+
+    @media (max-width: 576px) {
+      padding: 0 0.5rem;
+    }
   }
 
   .event-card {
     border: 2px dashed;
     border-color: $danger;
+    height: 100%;
+
+    @media (max-width: 576px) {
+      border-width: 1.5px;
+    }
   }
 
   .card-img-top {
@@ -283,6 +427,14 @@ body {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     object-position: center;
+  }
+
+  .card-title {
+    font-size: clamp(0.95rem, 2vw, 1.25rem);
+  }
+
+  .card-subtitle {
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
   }
 }
 
@@ -292,6 +444,8 @@ body {
     margin-bottom: 1rem;
     color: $danger;
     text-align: center;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    padding: 0 1rem;
   }
 
   p {
@@ -304,7 +458,12 @@ body {
     }
 
     @media (max-width: 768px) {
-      margin: 0.5rem 0;
+      margin: 0.75rem;
+    }
+
+    @media (max-width: 576px) {
+      margin: 0.5rem;
+      font-size: 0.95rem;
     }
   }
 
@@ -318,6 +477,11 @@ body {
     @media (max-width: 768px) {
       height: 400px;
     }
+
+    @media (max-width: 576px) {
+      height: 350px;
+      border-radius: 8px;
+    }
   }
 }
 
@@ -327,6 +491,8 @@ body {
     margin-bottom: 1rem;
     color: $danger;
     text-align: center;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    padding: 0 1rem;
   }
 
   p {
@@ -344,7 +510,12 @@ body {
     }
 
     @media (max-width: 768px) {
-      margin: 0.5rem 0;
+      margin: 0.75rem;
+    }
+
+    @media (max-width: 576px) {
+      margin: 0.5rem;
+      font-size: 0.95rem;
     }
   }
 }
@@ -355,19 +526,41 @@ body {
     margin-bottom: 1rem;
     color: $danger;
     text-align: center;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    padding: 0 1rem;
   }
 
   .alumni-list {
     margin-left: 1rem;
+
+    @media (max-width: 576px) {
+      margin-left: 0.5rem;
+      font-size: 0.95rem;
+    }
   }
 
   h3 {
     color: $danger;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    padding: 0 1rem;
+  }
+
+  .row {
+    padding: 0 1rem;
+
+    @media (max-width: 576px) {
+      padding: 0 0.5rem;
+    }
   }
 
   .board-card {
     border: 2px dashed;
     border-color: $danger;
+    height: 100%;
+
+    @media (max-width: 576px) {
+      border-width: 1.5px;
+    }
   }
 
   .card-img-top {
@@ -376,29 +569,74 @@ body {
     object-fit: cover;
     object-position: center;
   }
+
+  .card-title {
+    font-size: clamp(0.95rem, 2vw, 1.25rem);
+  }
+
+  .card-subtitle {
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+  }
 }
 
 .description {
   padding-top: 1.5rem;
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.6;
 
   @media (max-width: 768px) {
     max-width: 100%;
+    padding-top: 1rem;
   }
 
-  @media (max-width: 480px) {
-    font-size: 1rem;
+  @media (max-width: 576px) {
+    font-size: 0.95rem;
+    padding-top: 0.75rem;
   }
 }
 
 .accordion {
   margin-top: 2rem;
   max-width: 73vw;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 768px) {
+    max-width: 90vw;
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 576px) {
+    max-width: 95vw;
+    margin-top: 1rem;
+  }
+
+  .accordion-button {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    padding: 0.75rem 1rem;
+
+    @media (max-width: 576px) {
+      padding: 0.6rem 0.75rem;
+    }
+  }
+
+  .accordion-body {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    padding: 1rem;
+
+    @media (max-width: 576px) {
+      padding: 0.75rem;
+    }
+  }
 }
 
 .footer {
   margin-top: 2rem;
+
+  @media (max-width: 576px) {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 .date {
@@ -407,16 +645,17 @@ body {
   margin-bottom: 20px;
   border-radius: 9999px;
   padding: 8px 16px;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   transition: transform 0.2s ease-in-out;
 
   &:hover {
     transform: rotate(0deg);
   }
 
-  @media (max-width: 480px) {
-    font-size: 1rem;
+  @media (max-width: 576px) {
+    font-size: 0.95rem;
     padding: 6px 12px;
+    margin-bottom: 15px;
   }
 }
 
@@ -436,10 +675,17 @@ body {
     flex-direction: column;
     align-items: flex-start;
     max-width: 95vw;
+    padding: 12px;
+    gap: 0.8rem;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 576px) {
     padding: 8px;
+    gap: 0.5rem;
+  }
+
+  .row {
+    width: 100%;
   }
 }
 
@@ -457,6 +703,28 @@ body {
     transform: rotate(0deg);
     margin-bottom: 1rem;
   }
+
+  @media (max-width: 576px) {
+    border-width: 1.5px;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+
+    @media (max-width: 576px) {
+      padding: 1rem;
+    }
+  }
+
+  .card-title {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+  }
+
+  .card-text {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.5;
+  }
 }
 
 .music-icon {
@@ -466,6 +734,10 @@ body {
   background-color: $primary;
   padding: 7px;
   border-radius: 10px;
+
+  @media (max-width: 576px) {
+    padding: 6px;
+  }
 }
 
 .card-2 {
@@ -482,6 +754,28 @@ body {
     transform: rotate(0deg);
     margin-bottom: 1rem;
   }
+
+  @media (max-width: 576px) {
+    border-width: 1.5px;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+
+    @media (max-width: 576px) {
+      padding: 1rem;
+    }
+  }
+
+  .card-title {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+  }
+
+  .card-text {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.5;
+  }
 }
 
 .calendar-icon {
@@ -491,6 +785,10 @@ body {
   background-color: #e06b80;
   padding: 7px;
   border-radius: 10px;
+
+  @media (max-width: 576px) {
+    padding: 6px;
+  }
 }
 
 .card-3 {
@@ -507,6 +805,28 @@ body {
     transform: rotate(0deg);
     margin-bottom: 1rem;
   }
+
+  @media (max-width: 576px) {
+    border-width: 1.5px;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+
+    @media (max-width: 576px) {
+      padding: 1rem;
+    }
+  }
+
+  .card-title {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+  }
+
+  .card-text {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.5;
+  }
 }
 
 .users-icon {
@@ -516,6 +836,10 @@ body {
   background-color: #7d8d86;
   padding: 7px;
   border-radius: 10px;
+
+  @media (max-width: 576px) {
+    padding: 6px;
+  }
 }
 
 .hero-image {
@@ -539,6 +863,15 @@ body {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    transform: rotate(0deg);
+    order: 1;
+  }
+
+  @media (max-width: 576px) {
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+    border-width: 2px;
   }
 }

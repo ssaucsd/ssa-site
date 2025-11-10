@@ -11,7 +11,7 @@ const Ensemble = () => {
       <NavBar selectedItem="Ensemble" />
       <Container fluid className="ensemble-content">
         <h1>Ensemble</h1>
-        <Row>
+        <Row className="ensemble-row">
           <EnsembleCarousel />
           <EnsembleDescription />
         </Row>

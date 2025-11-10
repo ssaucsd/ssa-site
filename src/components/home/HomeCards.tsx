@@ -6,8 +6,8 @@ const HomeCards = () => {
     <>
       <Container fluid>
         <Row className="cards-row1">
-          <Col className="flex-column">
-            <Card className="card-1">
+          <Col xs={12} md={6} lg={4} className="mb-3 mb-lg-0">
+            <Card className="card-1 h-100">
               <Card.Body>
                 <Music2 size={48} className="music-icon" />
                 <Card.Title>Weekly Rehearsals</Card.Title>
@@ -18,8 +18,8 @@ const HomeCards = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col>
-            <Card className="card-2">
+          <Col xs={12} md={6} lg={4} className="mb-3 mb-lg-0">
+            <Card className="card-2 h-100">
               <Card.Body>
                 <Calendar size={48} className="calendar-icon" />
                 <Card.Title>Quarterly Concerts</Card.Title>
@@ -30,18 +30,18 @@ const HomeCards = () => {
               </Card.Body>
             </Card>
           </Col>
-        </Row>
-        <Row className="cards-row2">
-          <Card className="card-3">
-            <Card.Body>
-              <Users size={48} className="users-icon" />
-              <Card.Title>Community Vibes</Card.Title>
-              <Card.Text>
-                Connect with fellow music enthusiasts and build lifelong
-                friendships.
-              </Card.Text>
-            </Card.Body>
-          </Card>
+          <Col xs={12} md={12} lg={4}>
+            <Card className="card-3 h-100">
+              <Card.Body>
+                <Users size={48} className="users-icon" />
+                <Card.Title>Community Vibes</Card.Title>
+                <Card.Text>
+                  Connect with fellow music enthusiasts and build lifelong
+                  friendships.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
         </Row>
       </Container>
     </>

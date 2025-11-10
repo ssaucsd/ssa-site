@@ -13,7 +13,7 @@ const VideoEmbeds = () => {
     },
   };
   return (
-    <Row className="video-embeds">
+    <Row className="video-embeds g-3 g-lg-4">
       <Col xs={12} lg={6} className="video-embed-col">
         <YouTube videoId="BP3JlLMf71c" opts={opts} onReady={onPlayerReady} />
       </Col>

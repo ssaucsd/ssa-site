@@ -23,7 +23,7 @@ const images: CarouselImage[] = [
 const EnsembleCarousel = () => {
   return (
     <>
-      <Col className="ensemble-carousel">
+      <Col xs={12} md={6} lg={5} className="ensemble-carousel mb-3 mb-md-0">
         <Carousel>
           {images.map((image, index) => (
             <Carousel.Item key={index}>
