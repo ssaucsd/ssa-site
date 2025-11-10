@@ -12,8 +12,8 @@ const HomeCards = () => {
                 <Music2 size={48} className="music-icon" />
                 <Card.Title>Weekly Rehearsals</Card.Title>
                 <Card.Text>
-                  Join us every Wednesday evening for collaborative music-making
-                  and skill development, as well as preparation for concerts.
+                  Join us every Wednesday evening for music-making and social
+                  opportunities in preparation for quartely performances.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -24,8 +24,8 @@ const HomeCards = () => {
                 <Calendar size={48} className="calendar-icon" />
                 <Card.Title>Quarterly Concerts</Card.Title>
                 <Card.Text>
-                  Perform in stunning venues across campus and share music with
-                  the community.
+                  Perform once a quarter in various venues across campus and
+                  share music with the community.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -36,8 +36,9 @@ const HomeCards = () => {
                 <Users size={48} className="users-icon" />
                 <Card.Title>Community Vibes</Card.Title>
                 <Card.Text>
-                  Connect with fellow music enthusiasts and build lifelong
-                  friendships.
+                  Connect with fellow classical music enthusiasts through
+                  rehearsals, performances, and various social opportunities
+                  throughout the year and build lasting friendships.
                 </Card.Text>
               </Card.Body>
             </Card>

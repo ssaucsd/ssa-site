@@ -6,18 +6,18 @@ const HomeContent = () => {
     <Container fluid className="horizontal-container">
       <Row className="align-items-center">
         <Col xs={12} md={6} className="text-content">
-          <Badge bg="primary" className="date">
+          <Badge bg="dark" className="date">
             <Stars size={18} /> est. 2018
           </Badge>
           <div className="club-title">
-            <span className="text-danger">Symphonic</span> <br />
-            <span className="text-secondary">Student</span> <br />
-            <span className="text-pink">Association</span> <br />
-            <span className="text-secondary">@ UCSD</span> <br />
+            <span>Symphonic</span> <br />
+            <span>Student</span> <br />
+            <span>Association</span> <br />
+            <span>@ UCSD</span> <br />
             <p className="description">
-              UCSD's premier student organization dedicated to bringing together
-              musicians, music lovers, and anyone who wants to experience the
-              magic of symphonic music.
+              UCSD's classical music-oriented student organization dedicated to
+              bringing together classical musicians and music enjoyers from all
+              backgrounds and disciplines!
             </p>
           </div>
         </Col>
@@ -25,7 +25,7 @@ const HomeContent = () => {
           <Image
             src="/assets/hero.jpg"
             alt="SSA Ensemble"
-            className="hero-image border-primary"
+            className="hero-image"
             fluid
           />
         </Col>

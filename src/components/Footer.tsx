@@ -21,7 +21,7 @@ const Footer = () => {
     <>
       <footer className="footer">
         <Container fluid>
-          <Row className="bg-primary text-white p-4">
+          <Row className="footer-content p-4">
             <Col mx-5="true">
               <Stack>
                 <Image
@@ -41,25 +41,25 @@ const Footer = () => {
                 <h4>Links</h4>
                 <NavLink
                   href="https://discord.gg/PncDrAxvkS"
-                  className="text-white"
+                  className="footer-link"
                 >
                   <MessageCircle size={18} /> Discord
                 </NavLink>
                 <NavLink
                   href="https://www.instagram.com/ssa_at_ucsd?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                  className="text-white"
+                  className="footer-link"
                 >
                   <Instagram size={18} /> Instagram
                 </NavLink>
                 <NavLink
                   href="http://www.youtube.com/@symphonicstudentassociatio8977"
-                  className="text-white"
+                  className="footer-link"
                 >
                   <Youtube size={18} /> YouTube
                 </NavLink>
                 <NavLink
                   href="https://linktr.ee/ssa_at_ucsd"
-                  className="text-white"
+                  className="footer-link"
                 >
                   <TreePalm size={18} /> Linktree
                 </NavLink>
@@ -68,7 +68,10 @@ const Footer = () => {
             <Col>
               <Nav className="flex-column fs-8">
                 <h4>Contact Us!</h4>
-                <NavLink href="mailto:symphoni@ucsd.edu" className="text-white">
+                <NavLink
+                  href="mailto:symphoni@ucsd.edu"
+                  className="footer-link"
+                >
                   <Mail size={18} /> Email
                 </NavLink>
               </Nav>
