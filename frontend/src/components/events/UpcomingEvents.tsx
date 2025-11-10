@@ -14,6 +14,7 @@ const UpcomingEvents = () => {
               <Card className="h-100 event-card">
                 <Card.Img
                   variant="top"
+                  loading="lazy"
                   src={event.flyerUrl}
                   alt={`${event.name} flyer`}
                 />

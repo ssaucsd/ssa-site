@@ -11,6 +11,7 @@ const BoardCards = () => {
             <Card className="h-100 board-card">
               <Card.Img
                 variant="top"
+                loading="lazy"
                 src={member.imageUrl}
                 alt={`${member.name} photo`}
               />
