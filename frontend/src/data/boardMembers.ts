@@ -16,7 +16,7 @@ export const boardMembers: BoardMember[] = [
     pronouns: "he/him",
     year: "4th year",
     instrument: "Flute",
-    imageUrl: "/assets/board/keene.jpg",
+    imageUrl: "/assets/board/keene.webp",
     major: "ICAM Music + Business Economics",
     minor: "Computer Science",
   },
@@ -27,7 +27,7 @@ export const boardMembers: BoardMember[] = [
     pronouns: "he/him",
     year: "2nd year",
     instrument: "Oboe",
-    imageUrl: "/assets/board/zing.jpeg",
+    imageUrl: "/assets/board/zing.webp",
     major: "Political Science + Economics",
     minor: "Music",
   },
@@ -38,7 +38,7 @@ export const boardMembers: BoardMember[] = [
     pronouns: "he/him",
     year: "4th year",
     instrument: "Violin, Conductor",
-    imageUrl: "/assets/board/ryan.jpeg",
+    imageUrl: "/assets/board/ryan.webp",
     major: "Economics",
     minor: "Music",
   },
@@ -49,7 +49,7 @@ export const boardMembers: BoardMember[] = [
     pronouns: "he/him",
     year: "2nd year",
     instrument: "Piano, Clarinet",
-    imageUrl: "/assets/board/nathan.jpeg",
+    imageUrl: "/assets/board/nathan.webp",
     major: "International Business + International Relations",
   },
 
@@ -59,7 +59,7 @@ export const boardMembers: BoardMember[] = [
     pronouns: "she/they",
     year: "4th year",
     instrument: "French Horn",
-    imageUrl: "/assets/board/mai.jpg",
+    imageUrl: "/assets/board/mai.webp",
     major: "Ecology, Behavior, and Evolution",
   },
 
@@ -69,7 +69,7 @@ export const boardMembers: BoardMember[] = [
     pronouns: "she/her",
     year: "2nd year",
     instrument: "Violin",
-    imageUrl: "/assets/board/elnaz.jpeg",
+    imageUrl: "/assets/board/elnaz.webp",
     major: "Molecular & Cell Biology",
   },
 
@@ -79,7 +79,7 @@ export const boardMembers: BoardMember[] = [
     pronouns: "she/her",
     year: "1st year",
     instrument: "Violin, Alto Sax",
-    imageUrl: "/assets/board/daphne.jpeg",
+    imageUrl: "/assets/board/daphne.webp",
     major: "Molecular & Cell Biology",
   },
 
@@ -89,7 +89,7 @@ export const boardMembers: BoardMember[] = [
     pronouns: "he/him",
     year: "1st year",
     instrument: "Violin, Voice",
-    imageUrl: "/assets/board/john.jpeg",
+    imageUrl: "/assets/board/john.webp",
     major: "Applied Math",
   },
 
@@ -99,7 +99,7 @@ export const boardMembers: BoardMember[] = [
     pronouns: "she/her",
     year: "4th year",
     instrument: "Violin, Voice",
-    imageUrl: "/assets/board/lina.jpeg",
+    imageUrl: "/assets/board/lina.webp",
     major: "Neurobiology",
   },
 
@@ -109,7 +109,7 @@ export const boardMembers: BoardMember[] = [
     pronouns: "she/her",
     year: "3rd year",
     instrument: "Flute",
-    imageUrl: "/assets/board/kayla.png",
+    imageUrl: "/assets/board/kayla.webp",
     major: "Applied Math",
   },
 
@@ -119,7 +119,7 @@ export const boardMembers: BoardMember[] = [
     pronouns: "he/him",
     year: "3rd year",
     instrument: "Trumpet",
-    imageUrl: "/assets/board/finn.jpg",
+    imageUrl: "/assets/board/finn.webp",
     major: "Environmental Systems EBE",
   },
 
@@ -129,7 +129,7 @@ export const boardMembers: BoardMember[] = [
     pronouns: "she/her",
     year: "1st year",
     instrument: "Piano",
-    imageUrl: "/assets/board/linda.jpeg",
+    imageUrl: "/assets/board/linda.webp",
     major: "Political Science: Data Analytics",
   },
 
@@ -139,7 +139,7 @@ export const boardMembers: BoardMember[] = [
     pronouns: "he/him",
     year: "1st year",
     instrument: "Cello",
-    imageUrl: "/assets/board/jacob.png",
+    imageUrl: "/assets/board/jacob.webp",
     major: "Bioinformatics",
   },
 
@@ -149,7 +149,7 @@ export const boardMembers: BoardMember[] = [
     pronouns: "she/her",
     year: "1st year",
     instrument: "Cello",
-    imageUrl: "/assets/board/sylvia.jpeg",
+    imageUrl: "/assets/board/sylvia.webp",
     major: "Neurobiology",
   },
 
@@ -159,7 +159,7 @@ export const boardMembers: BoardMember[] = [
     pronouns: "he/him",
     year: "2nd year",
     instrument: "Trumpet",
-    imageUrl: "/assets/board/evan.jpeg",
+    imageUrl: "/assets/board/evan.webp",
     major: "Biochemistry",
   },
 
@@ -169,7 +169,7 @@ export const boardMembers: BoardMember[] = [
     pronouns: "he/him",
     year: "1st year",
     instrument: "Violin",
-    imageUrl: "/assets/board/daniel.jpeg",
+    imageUrl: "/assets/board/daniel.webp",
     major: "Math-CS",
   },
 ];

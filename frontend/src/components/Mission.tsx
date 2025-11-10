@@ -10,7 +10,7 @@ const Mission = () => {
         <Row>
           <Col xs={12} md={5} lg={4}>
             <img
-              src="/assets/mission.jpg"
+              src="/assets/mission.webp"
               alt="A picture of SSA members at the beach"
             />
           </Col>

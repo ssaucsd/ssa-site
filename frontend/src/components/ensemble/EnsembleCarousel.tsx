@@ -7,15 +7,15 @@ interface CarouselImage {
 
 const images: CarouselImage[] = [
   {
-    src: "/assets/ensemble/carousel1.jpg",
+    src: "/assets/ensemble/carousel1.webp",
     alt: "View from the back of the winds section",
   },
   {
-    src: "/assets/ensemble/carousel2.jpg",
+    src: "/assets/ensemble/carousel2.webp",
     alt: "View of the conductor",
   },
   {
-    src: "/assets/ensemble/carousel3.jpg",
+    src: "/assets/ensemble/carousel3.webp",
     alt: "View from backstage",
   },
 ];

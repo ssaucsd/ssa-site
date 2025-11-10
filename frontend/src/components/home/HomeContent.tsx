@@ -23,7 +23,7 @@ const HomeContent = () => {
         </Col>
         <Col xs={12} md={6}>
           <Image
-            src="/assets/hero.jpg"
+            src="/assets/hero.webp"
             alt="SSA Ensemble"
             className="hero-image"
             fluid
