@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Link } from "react-router";
+import { prefetchRoute } from "../utils/prefetch";
 
 export interface Props {
   selectedItem: string;
@@ -57,7 +59,7 @@ const NavBar = ({ selectedItem }: Props) => {
   return (
     <Navbar expand="lg" className="navbar bg-primary">
       <Container fluid>
-        <Navbar.Brand href="/">
+        <Navbar.Brand as={Link} to="/">
           <img
             src="/assets/favicon/android-chrome-512x512.png"
             alt="SSA Logo"
@@ -71,9 +73,11 @@ const NavBar = ({ selectedItem }: Props) => {
             {NavItems.map((item) => (
               <Nav.Link
                 key={item.text}
-                href={item.link}
+                as={Link}
+                to={item.link}
                 active={selected === item.text}
                 onClick={() => setSelected(item.text)}
+                onMouseEnter={() => prefetchRoute(item.link)}
               >
                 {item.text}
               </Nav.Link>
@@ -87,10 +91,12 @@ const NavBar = ({ selectedItem }: Props) => {
             >
               {DropdownItems.map((item) => (
                 <NavDropdown.Item
-                  href={item.link}
+                  as={Link}
+                  to={item.link}
                   key={item.text}
                   active={selected === item.text}
                   onClick={() => setSelected(item.text)}
+                  onMouseEnter={() => prefetchRoute(item.link)}
                 >
                   {item.text}
                 </NavDropdown.Item>
