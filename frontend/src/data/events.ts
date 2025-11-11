@@ -14,12 +14,6 @@ export const events: event[] = [
   },
   {
     name: "SSA x Yogurt World Fundraiser",
-    upcoming: true,
-    date: "October 8, 2025",
-    flyerUrl: "/assets/events/yyf.webp",
-  },
-  {
-    name: "SSA x Yogurt World Fundraiser",
     upcoming: false,
     date: "October 8, 2025",
     flyerUrl: "/assets/events/yyf.webp",
