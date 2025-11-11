@@ -143,10 +143,9 @@ a {
 
 .horizontal-container {
   display: flex;
-  max-width: 1400px;
+  max-width: 95vw;
   margin: 0 auto;
   align-items: center;
-  justify-content: center;
   gap: 1.2rem;
   padding: 16px;
 
@@ -170,11 +169,15 @@ a {
   min-width: 0;
   max-width: 700px;
   margin-top: clamp(0.5rem, 5vh, 5%);
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: clamp(1rem, 10vw, 10%);
+  margin-right: 5vw;
 
   p {
     margin-top: 0.2rem;
+  }
+
+  @media (max-width: 900px) {
+    margin-right: 2rem;
   }
 
   @media (max-width: 768px) {
@@ -220,7 +223,7 @@ a {
 
 .hero-image {
   flex-shrink: 0;
-  margin-left: 2rem;
+  margin-left: 0;
   margin-right: 2rem;
   margin-top: clamp(1rem, 10vh, 5%);
   object-fit: cover;
