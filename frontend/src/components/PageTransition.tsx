@@ -10,8 +10,14 @@ const PageTransition = ({ children, locationKey }: PageTransitionProps) => {
   const [displayChildren, setDisplayChildren] = useState(children);
   const [transitionStage, setTransitionStage] = useState("fadeIn");
   const currentKey = useRef(locationKey);
+  const isInitialMount = useRef(true);
 
   useEffect(() => {
+    // Mark initial mount as complete after first render
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+    }
+
     if (locationKey !== currentKey.current) {
       setTransitionStage("fadeOut");
     }
@@ -19,7 +25,9 @@ const PageTransition = ({ children, locationKey }: PageTransitionProps) => {
 
   return (
     <div
-      className={`page-transition ${transitionStage}`}
+      className={`page-transition ${
+        isInitialMount.current ? "no-animation" : transitionStage
+      }`}
       onAnimationEnd={() => {
         if (transitionStage === "fadeOut") {
           setDisplayChildren(children);

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router";
-import { prefetchRoute } from "../utils/prefetch";
 
 export interface Props {
   selectedItem: string;
@@ -77,7 +76,6 @@ const NavBar = ({ selectedItem }: Props) => {
                 to={item.link}
                 active={selected === item.text}
                 onClick={() => setSelected(item.text)}
-                onMouseEnter={() => prefetchRoute(item.link)}
               >
                 {item.text}
               </Nav.Link>
@@ -96,7 +94,6 @@ const NavBar = ({ selectedItem }: Props) => {
                   key={item.text}
                   active={selected === item.text}
                   onClick={() => setSelected(item.text)}
-                  onMouseEnter={() => prefetchRoute(item.link)}
                 >
                   {item.text}
                 </NavDropdown.Item>

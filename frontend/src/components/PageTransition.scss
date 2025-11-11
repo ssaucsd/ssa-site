@@ -4,6 +4,12 @@
   animation-timing-function: ease-out;
 }
 
+.page-transition.no-animation {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+
 .page-transition.fadeOut {
   animation-name: fadeOutAnimation;
 }
