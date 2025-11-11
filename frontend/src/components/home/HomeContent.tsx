@@ -25,6 +25,7 @@ const HomeContent = () => {
           <Image
             src="/assets/hero.webp"
             alt="SSA Ensemble"
+            fetchPriority="high"
             className="hero-image"
             fluid
           />

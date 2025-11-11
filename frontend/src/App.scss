@@ -49,24 +49,8 @@ $navbar-dark-brand-hover-color: rgba(255, 255, 255, 1);
   $navbar-dark-brand-hover-color: $navbar-dark-brand-hover-color
 );
 
-@font-face {
-  font-family: "Open Sans";
-  src: url("/dist/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
-  font-weight: 300 800;
-  font-stretch: 75% 100%;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  src: url("/dist/fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf")
-    format("truetype");
-  font-weight: 300 800;
-  font-stretch: 75% 100%;
-  font-style: italic;
-  font-display: swap;
-}
+// Fonts are loaded via Google Fonts in index.html
+// No @font-face declarations needed
 
 // ============================================================================
 // GLOBAL STYLES
