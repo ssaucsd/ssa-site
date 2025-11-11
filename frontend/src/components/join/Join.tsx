@@ -1,5 +1,6 @@
 import NavBar from "../NavBar";
 import Footer from "../Footer";
+import JoinForm from "./JoinForm";
 import { Container } from "react-bootstrap";
 
 const Join = () => {
@@ -24,13 +25,7 @@ const Join = () => {
             <li>Subscribing to our mailing list below</li>
           </ul>
         </p>
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSeqAfXHr8gYVR7HUYnbBAjY2pYg1641C2p1Fv4uC4YcFWLzLQ/viewform?embedded=true"
-          width="640"
-          height="629"
-        >
-          Loading…
-        </iframe>
+        <JoinForm />
       </Container>
       <Footer />
     </>
