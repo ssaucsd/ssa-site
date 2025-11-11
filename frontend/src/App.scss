@@ -49,52 +49,10 @@ $navbar-dark-brand-hover-color: rgba(255, 255, 255, 1);
   $navbar-dark-brand-hover-color: $navbar-dark-brand-hover-color
 );
 
-/* open-sans-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/open-sans-v44-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* open-sans-600 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 600;
-  src: url("/fonts/open-sans-v44-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
 // ============================================================================
 // GLOBAL STYLES
 // ============================================================================
-
-:root {
-  --accent: #{$danger};
-  --dark-background: #{$primary};
-  --background: #{$light};
-  --brown: #{$secondary};
-  font-size: 16px;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  font-family:
-    $font-family-base,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
-  background-color: $primary;
-  color: #000;
-}
+// Note: Critical CSS (fonts, :root, body, basic links) inlined in index.html
 
 a {
   color: #000;
@@ -115,21 +73,10 @@ a {
 // ============================================================================
 // NAVIGATION
 // ============================================================================
+// Note: Critical navbar styles inlined in index.html
 
 .navbar {
-  border-bottom: 4px dashed $danger;
-
-  .navbar-brand {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
-  }
-
   .navbar-logo {
-    margin-right: 8px;
-    width: 40px;
-    height: 40px;
     transition: transform 0.7s ease-in-out;
 
     &:hover {
