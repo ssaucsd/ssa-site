@@ -1,9 +1,9 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route, useLocation } from "react-router";
 import PageTransition from "./PageTransition.tsx";
+import App from "../App.tsx";
 
-// Lazy load all route components
-const App = lazy(() => import("../App.tsx"));
+// Lazy load all route components except home
 const Board = lazy(() => import("./board/Board.tsx"));
 const Mission = lazy(() => import("./Mission.tsx"));
 const Events = lazy(() => import("./events/Events.tsx"));
