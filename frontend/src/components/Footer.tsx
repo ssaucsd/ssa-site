@@ -29,6 +29,7 @@ const Footer = () => {
                   alt="SSA Logo"
                   className="footer-logo mb-2"
                   width={128}
+                  height={128}
                 />
                 <h4>
                   Symphonic Student <br /> Association

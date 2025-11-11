@@ -16,12 +16,9 @@ const JoinForm = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Google Form URL - the form ID from the iframe
   const GOOGLE_FORM_ACTION_URL =
     "https://docs.google.com/forms/d/e/1FAIpQLSeqAfXHr8gYVR7HUYnbBAjY2pYg1641C2p1Fv4uC4YcFWLzLQ/formResponse";
 
-  // These entry IDs need to be extracted from the actual Google Form
-  // To get them: inspect the Google Form iframe and look for input names like "entry.123456789"
   const ENTRY_IDS = {
     name: "entry.651401770",
     email: "entry.1281671811",
