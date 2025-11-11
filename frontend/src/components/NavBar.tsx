@@ -1,10 +1,6 @@
 import { useState } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { Link } from "react-router";
-
-export interface Props {
-  selectedItem: string;
-}
+import { Link, useLocation } from "react-router";
 
 export interface NavItem {
   text: string;
@@ -45,14 +41,23 @@ const DropdownItems: NavItem[] = [
   },
 ];
 
-const NavBar = ({ selectedItem }: Props) => {
-  const [selected, setSelected] = useState(selectedItem);
+const NavBar = () => {
+  const location = useLocation();
   const [show, setShow] = useState(false);
+
   const showDropdown = () => {
     setShow(!show);
   };
   const hideDropdown = () => {
     setShow(false);
+  };
+
+  // Determine which item is selected based on current route
+  const isActive = (link: string) => {
+    if (link === "/") {
+      return location.pathname === "/";
+    }
+    return location.pathname === link;
   };
 
   return (
@@ -74,8 +79,7 @@ const NavBar = ({ selectedItem }: Props) => {
                 key={item.text}
                 as={Link}
                 to={item.link}
-                active={selected === item.text}
-                onClick={() => setSelected(item.text)}
+                active={isActive(item.link)}
               >
                 {item.text}
               </Nav.Link>
@@ -92,8 +96,7 @@ const NavBar = ({ selectedItem }: Props) => {
                   as={Link}
                   to={item.link}
                   key={item.text}
-                  active={selected === item.text}
-                  onClick={() => setSelected(item.text)}
+                  active={isActive(item.link)}
                 >
                   {item.text}
                 </NavDropdown.Item>

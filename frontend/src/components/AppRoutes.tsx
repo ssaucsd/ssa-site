@@ -1,9 +1,12 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route, useLocation } from "react-router";
 import PageTransition from "./PageTransition.tsx";
-import App from "../App.tsx";
+import LoadingScreen from "./LoadingScreen.tsx";
+import NavBar from "./NavBar.tsx";
+import Footer from "./Footer.tsx";
+import Home from "./home/Home.tsx";
 
-// Lazy load all route components except home
+// Lazy load all route components except home content
 const Board = lazy(() => import("./board/Board.tsx"));
 const Mission = lazy(() => import("./Mission.tsx"));
 const Events = lazy(() => import("./events/Events.tsx"));
@@ -15,19 +18,63 @@ function AppRoutes() {
   const location = useLocation();
 
   return (
-    <PageTransition locationKey={location.pathname}>
-      <Suspense fallback={<div style={{ minHeight: "100vh" }} />}>
+    <>
+      <NavBar />
+      <PageTransition locationKey={location.pathname}>
         <Routes location={location}>
-          <Route path="/" element={<App />} />
-          <Route path="/board" element={<Board />} />
-          <Route path="/mission" element={<Mission />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/ensemble" element={<Ensemble />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="/join" element={<Join />} />
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/board"
+            element={
+              <Suspense fallback={<LoadingScreen />}>
+                <Board />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/mission"
+            element={
+              <Suspense fallback={<LoadingScreen />}>
+                <Mission />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/events"
+            element={
+              <Suspense fallback={<LoadingScreen />}>
+                <Events />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/ensemble"
+            element={
+              <Suspense fallback={<LoadingScreen />}>
+                <Ensemble />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/support"
+            element={
+              <Suspense fallback={<LoadingScreen />}>
+                <Support />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/join"
+            element={
+              <Suspense fallback={<LoadingScreen />}>
+                <Join />
+              </Suspense>
+            }
+          />
         </Routes>
-      </Suspense>
-    </PageTransition>
+      </PageTransition>
+      <Footer />
+    </>
   );
 }
 
