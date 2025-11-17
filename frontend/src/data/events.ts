@@ -8,7 +8,7 @@ export interface event {
 export const events: event[] = [
   {
     name: "SD Symphony Social",
-    upcoming: true,
+    upcoming: false,
     date: "November 14, 2025",
     flyerUrl: "/assets/events/sdsfall.webp",
   },

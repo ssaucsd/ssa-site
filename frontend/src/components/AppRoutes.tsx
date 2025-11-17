@@ -3,7 +3,6 @@ import { Routes, Route, useLocation } from "react-router";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../App.scss";
 import PageTransition from "./PageTransition.tsx";
-import LoadingScreen from "./LoadingScreen.tsx";
 import NavBar from "./NavBar.tsx";
 import Footer from "./Footer.tsx";
 import Home from "./home/Home.tsx";
@@ -15,7 +14,6 @@ const EventsLazy = lazy(() => import("./events/Events.tsx"));
 const EnsembleLazy = lazy(() => import("./ensemble/Ensemble.tsx"));
 const SupportLazy = lazy(() => import("./Support.tsx"));
 const JoinLazy = lazy(() => import("./join/Join.tsx"));
-const DashboardLazy = lazy(() => import("./dashboard/Dashboard.tsx"));
 
 function AppRoutes() {
   const location = useLocation();
@@ -45,9 +43,6 @@ function AppRoutes() {
           case "/join":
             await import("./join/Join.tsx");
             break;
-          case "/dashboard":
-            await import("./dashboard/Dashboard.tsx");
-            break;
         }
       } catch (error) {
         console.error("Failed to preload component:", error);
@@ -74,7 +69,7 @@ function AppRoutes() {
               isInitialRoute("/board") ? (
                 <BoardLazy />
               ) : (
-                <Suspense fallback={<LoadingScreen />}>
+                <Suspense fallback={<div>Loading...</div>}>
                   <BoardLazy />
                 </Suspense>
               )
@@ -86,7 +81,7 @@ function AppRoutes() {
               isInitialRoute("/mission") ? (
                 <MissionLazy />
               ) : (
-                <Suspense fallback={<LoadingScreen />}>
+                <Suspense fallback={<div>Loading...</div>}>
                   <MissionLazy />
                 </Suspense>
               )
@@ -98,7 +93,7 @@ function AppRoutes() {
               isInitialRoute("/events") ? (
                 <EventsLazy />
               ) : (
-                <Suspense fallback={<LoadingScreen />}>
+                <Suspense fallback={<div>Loading...</div>}>
                   <EventsLazy />
                 </Suspense>
               )
@@ -110,7 +105,7 @@ function AppRoutes() {
               isInitialRoute("/ensemble") ? (
                 <EnsembleLazy />
               ) : (
-                <Suspense fallback={<LoadingScreen />}>
+                <Suspense fallback={<div>Loading...</div>}>
                   <EnsembleLazy />
                 </Suspense>
               )
@@ -122,7 +117,7 @@ function AppRoutes() {
               isInitialRoute("/support") ? (
                 <SupportLazy />
               ) : (
-                <Suspense fallback={<LoadingScreen />}>
+                <Suspense fallback={<div>Loading...</div>}>
                   <SupportLazy />
                 </Suspense>
               )
@@ -134,20 +129,8 @@ function AppRoutes() {
               isInitialRoute("/join") ? (
                 <JoinLazy />
               ) : (
-                <Suspense fallback={<LoadingScreen />}>
+                <Suspense fallback={<div>Loading...</div>}>
                   <JoinLazy />
-                </Suspense>
-              )
-            }
-          />
-          <Route
-            path="/dashboard"
-            element={
-              isInitialRoute("/dashboard") ? (
-                <DashboardLazy />
-              ) : (
-                <Suspense fallback={<LoadingScreen />}>
-                  <DashboardLazy />
                 </Suspense>
               )
             }
