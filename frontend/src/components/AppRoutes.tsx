@@ -6,6 +6,7 @@ import PageTransition from "./PageTransition.tsx";
 import NavBar from "./NavBar.tsx";
 import Footer from "./Footer.tsx";
 import Home from "./home/Home.tsx";
+import LoadingScreen from "./LoadingScreen.tsx";
 
 // Lazy load all route components except home content
 const BoardLazy = lazy(() => import("./board/Board.tsx"));
@@ -69,7 +70,7 @@ function AppRoutes() {
               isInitialRoute("/board") ? (
                 <BoardLazy />
               ) : (
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<LoadingScreen />}>
                   <BoardLazy />
                 </Suspense>
               )
@@ -81,7 +82,7 @@ function AppRoutes() {
               isInitialRoute("/mission") ? (
                 <MissionLazy />
               ) : (
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<LoadingScreen />}>
                   <MissionLazy />
                 </Suspense>
               )
@@ -93,7 +94,7 @@ function AppRoutes() {
               isInitialRoute("/events") ? (
                 <EventsLazy />
               ) : (
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<LoadingScreen />}>
                   <EventsLazy />
                 </Suspense>
               )
@@ -105,7 +106,7 @@ function AppRoutes() {
               isInitialRoute("/ensemble") ? (
                 <EnsembleLazy />
               ) : (
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<LoadingScreen />}>
                   <EnsembleLazy />
                 </Suspense>
               )
@@ -117,7 +118,7 @@ function AppRoutes() {
               isInitialRoute("/support") ? (
                 <SupportLazy />
               ) : (
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<LoadingScreen />}>
                   <SupportLazy />
                 </Suspense>
               )
@@ -129,7 +130,7 @@ function AppRoutes() {
               isInitialRoute("/join") ? (
                 <JoinLazy />
               ) : (
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<LoadingScreen />}>
                   <JoinLazy />
                 </Suspense>
               )
