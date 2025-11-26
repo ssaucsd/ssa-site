@@ -18,7 +18,7 @@ export const events: event[] = [
     upcoming: true,
     date: "December 3, 2025",
     flyerUrl:
-      "https://ba961nquml.ufs.sh/f/8WZL3qQlnribtkFF0LhkNZc1mibOKGHoS7280zB9gFRltfhT",
+      "https://ba961nquml.ufs.sh/f/8WZL3qQlnribtdw35hkNZc1mibOKGHoS7280zB9gFRltfhTE",
   },
   {
     name: "SD Symphony Social",
