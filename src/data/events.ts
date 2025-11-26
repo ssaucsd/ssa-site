@@ -7,6 +7,20 @@ export interface event {
 
 export const events: event[] = [
   {
+    name: "Fall Concert",
+    upcoming: true,
+    date: "December 4, 2025",
+    flyerUrl:
+      "https://ba961nquml.ufs.sh/f/8WZL3qQlnribAwPNmbYq0QkcvuIJnysmrS2RUKHBWFD5eCEo",
+  },
+  {
+    name: "Tapex Fundraiser",
+    upcoming: true,
+    date: "December 3, 2025",
+    flyerUrl:
+      "https://ba961nquml.ufs.sh/f/8WZL3qQlnribtkFF0LhkNZc1mibOKGHoS7280zB9gFRltfhT",
+  },
+  {
     name: "SD Symphony Social",
     upcoming: false,
     date: "November 14, 2025",
