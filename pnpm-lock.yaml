@@ -90,6 +90,9 @@ importers:
       vite:
         specifier: npm:rolldown-vite@7.1.14
         version: rolldown-vite@7.1.14(@types/node@24.10.0)(esbuild@0.25.12)(sass@1.93.3)(tsx@4.20.6)
+      vite-plugin-react-meta-map:
+        specifier: ^1.0.8
+        version: 1.0.8(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
 
 packages:
 
@@ -2041,6 +2044,12 @@ packages:
 
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
+
+  vite-plugin-react-meta-map@1.0.8:
+    resolution: {integrity: sha512-jtTzWkPmTnTFJcx++UtQNApzDhoeRB931d4ULF9kyY4bB3Ug1kYF5O+3VHLUXMO3ohTOdPXF5WKgk3W0RInUhQ==}
+    peerDependencies:
+      react: ^18.0.0 || ^17.0.0
+      react-dom: ^18.0.0 || ^17.0.0
 
   warning@4.0.3:
     resolution: {integrity: sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==}
@@ -4036,6 +4045,11 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
+
+  vite-plugin-react-meta-map@1.0.8(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+    dependencies:
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
 
   warning@4.0.3:
     dependencies:
