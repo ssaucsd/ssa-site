@@ -17,13 +17,14 @@ export const pages: PageMetaData[] = [
   {
     url: "index.html",
     bundleEntryPoint: "/src/main.tsx",
-    title: "Singapore Students Association at UCSD",
+    title: "Symphonic Student Association at UCSD",
     description:
-      "Welcome to the Singapore Students Association at UCSD! Join us for events, community, and support.",
-    keywords: "SSA, UCSD, Singapore, Students, Association, Community, Events",
+      "Welcome to the Symphonic Student Association at UCSD! Join us for music, community, and performances.",
+    keywords:
+      "SSA, UCSD, Symphonic, Student, Association, Music, Orchestra, Community",
     ogTitle: "SSA at UCSD - Home",
     ogDescription:
-      "Welcome to the Singapore Students Association at UCSD! Join us for events, community, and support.",
+      "Welcome to the Symphonic Student Association at UCSD! Join us for music, community, and performances.",
     ogType: "website",
   },
   {
@@ -31,11 +32,11 @@ export const pages: PageMetaData[] = [
     bundleEntryPoint: "/src/main.tsx",
     title: "Meet the Board - SSA at UCSD",
     description:
-      "Meet the dedicated board members of the Singapore Students Association at UCSD.",
-    keywords: "SSA, UCSD, Board, Leadership, Team",
+      "Meet the dedicated board members of the Symphonic Student Association at UCSD.",
+    keywords: "SSA, UCSD, Board, Leadership, Team, Music",
     ogTitle: "Meet the Board - SSA at UCSD",
     ogDescription:
-      "Meet the dedicated board members of the Singapore Students Association at UCSD.",
+      "Meet the dedicated board members of the Symphonic Student Association at UCSD.",
     ogType: "website",
   },
   {
@@ -43,11 +44,11 @@ export const pages: PageMetaData[] = [
     bundleEntryPoint: "/src/main.tsx",
     title: "Our Mission - SSA at UCSD",
     description:
-      "Learn about the mission and values of the Singapore Students Association at UCSD.",
-    keywords: "SSA, UCSD, Mission, Values, Goals",
+      "Learn about the mission and values of the Symphonic Student Association at UCSD.",
+    keywords: "SSA, UCSD, Mission, Values, Goals, Music, Arts",
     ogTitle: "Our Mission - SSA at UCSD",
     ogDescription:
-      "Learn about the mission and values of the Singapore Students Association at UCSD.",
+      "Learn about the mission and values of the Symphonic Student Association at UCSD.",
     ogType: "website",
   },
   {
@@ -55,11 +56,11 @@ export const pages: PageMetaData[] = [
     bundleEntryPoint: "/src/main.tsx",
     title: "Events - SSA at UCSD",
     description:
-      "Check out upcoming events hosted by the Singapore Students Association at UCSD.",
-    keywords: "SSA, UCSD, Events, Activities, Social",
+      "Check out upcoming concerts and events hosted by the Symphonic Student Association at UCSD.",
+    keywords: "SSA, UCSD, Events, Concerts, Performances, Social",
     ogTitle: "Events - SSA at UCSD",
     ogDescription:
-      "Check out upcoming events hosted by the Singapore Students Association at UCSD.",
+      "Check out upcoming concerts and events hosted by the Symphonic Student Association at UCSD.",
     ogType: "website",
   },
   {
@@ -67,7 +68,7 @@ export const pages: PageMetaData[] = [
     bundleEntryPoint: "/src/main.tsx",
     title: "Ensemble - SSA at UCSD",
     description: "Discover the SSA Ensemble and their performances.",
-    keywords: "SSA, UCSD, Ensemble, Music, Performance",
+    keywords: "SSA, UCSD, Ensemble, Music, Performance, Orchestra",
     ogTitle: "Ensemble - SSA at UCSD",
     ogDescription: "Discover the SSA Ensemble and their performances.",
     ogType: "website",
@@ -77,11 +78,11 @@ export const pages: PageMetaData[] = [
     bundleEntryPoint: "/src/main.tsx",
     title: "Support - SSA at UCSD",
     description:
-      "Find support resources and information for Singaporean students at UCSD.",
-    keywords: "SSA, UCSD, Support, Resources, Help",
+      "Find support resources and information for student musicians at UCSD.",
+    keywords: "SSA, UCSD, Support, Resources, Help, Musicians",
     ogTitle: "Support - SSA at UCSD",
     ogDescription:
-      "Find support resources and information for Singaporean students at UCSD.",
+      "Find support resources and information for student musicians at UCSD.",
     ogType: "website",
   },
   {
@@ -89,11 +90,11 @@ export const pages: PageMetaData[] = [
     bundleEntryPoint: "/src/main.tsx",
     title: "Join Us - SSA at UCSD",
     description:
-      "Become a member of the Singapore Students Association at UCSD today!",
-    keywords: "SSA, UCSD, Join, Membership, Sign up",
+      "Become a member of the Symphonic Student Association at UCSD today!",
+    keywords: "SSA, UCSD, Join, Membership, Sign up, Auditions",
     ogTitle: "Join Us - SSA at UCSD",
     ogDescription:
-      "Become a member of the Singapore Students Association at UCSD today!",
+      "Become a member of the Symphonic Student Association at UCSD today!",
     ogType: "website",
   },
 ];
