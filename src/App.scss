@@ -109,6 +109,28 @@ a {
         color: #fff;
       }
     }
+
+    @media (max-width: 991px) {
+      border: none;
+      background-color: transparent;
+      padding-left: 1.5rem;
+
+      .dropdown-item {
+        &:hover,
+        &:focus {
+          background-color: transparent;
+          color: $danger;
+          text-decoration: underline;
+        }
+
+        &.active,
+        &:active {
+          background-color: transparent;
+          color: $danger;
+          font-weight: bold;
+        }
+      }
+    }
   }
 
   .dashboard-link {

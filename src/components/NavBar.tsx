@@ -103,6 +103,16 @@ const NavBar = () => {
               ))}
             </NavDropdown>
           </Nav>
+          <Nav>
+            <Nav.Link
+              href="https://members.ssaucsd.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="dashboard-link"
+            >
+              Member Login
+            </Nav.Link>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
